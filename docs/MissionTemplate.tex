@@ -1,0 +1,109 @@
+%Basic Spy Mission Briefing%
+% Created by ***
+% Last Updated: 2020-04-04
+
+%To Do : 
+	%
+
+%Setup the doc
+\documentclass[12pt, letterpaper, twoside]{article}
+
+%-------------
+%   PACKAGES 
+%-------------
+
+%Margins
+\usepackage[tmargin=.72in, bmargin=.75in, hmargin=0.75in]{geometry}
+
+%Pics%
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+%Float logo
+\usepackage{tikz}  
+
+%Wrapfig
+\usepackage{wrapfig}
+
+%Color
+\usepackage{xcolor}
+
+%Fancy Styles
+\usepackage{titlesec}
+%Overwrite the default section style...
+\titleformat{\section}
+  {\Stencil\fontsize{16}{12}\selectfont}
+  {\thesection}{}{}
+
+%Watermark  
+\usepackage{xwatermark}
+\newwatermark[allpages,color=red!50,angle=15,scale=2,xpos=0,ypos=-85]{TOP SECRET}
+%\newwatermark[allpages,color=red!50,angle=-7,scale=1.3,xpos=20,ypos=125]{TOP SECRET}
+
+%Lipsum
+\usepackage{lipsum}
+
+%Font%
+\usepackage{fontspec}
+%Stencil 
+\newfontfamily{\Stencil}{STENCIL}[
+	Extension		= .TTF ,
+	Path				= ./
+]
+
+%------------------
+%     COMMANDS
+%-----------------
+
+%MISSION (Reverse Highlight)
+\newcommand{\M}{
+	\begin{center}
+		\colorbox{black}{		
+			{\color{white}\fontsize{30bp}{26bp}\selectfont \Stencil{\textsc{Spy Mission:}}}
+		}
+	\end{center}
+}
+
+%Mission Tittle
+\newcommand{\MB}[1]{
+	\begin{center}
+			{\color{black}\fontsize{24bp}{20bp}\selectfont \Stencil{\textsc{ #1 }}}
+	\end{center}
+	\hrule
+}
+
+%BoilerPlate
+\newcommand{\SD}{
+	\begin{center}
+		\textsc{this message will self destruct}
+		
+		\color{gray}{\textit{(tear me up now)}}
+	\end{center}
+}
+
+%------------------
+%     DOCUMENT
+%-----------------
+
+\begin{document}
+%An empty cup has the most potential
+\thispagestyle{empty}
+%Add a logo
+\begin{tikzpicture}[remember picture,overlay]
+   \node[anchor=north east,inner sep=20pt] at (current page.north east)
+              {\scalebox{-1}[1]{\includegraphics[scale=.75]{logo.png}}};              
+   \node[anchor=north west,inner sep=20pt] at (current page.north west)
+              {\scalebox{1}[1]{\includegraphics[scale=.75]{logo.png}}};
+\end{tikzpicture}
+\M
+\MB{Mission Name}
+\section*{Summary}
+\lipsum[1]{}
+\section*{Primary Objectives}
+\lipsum[2]{}
+\section*{Secondary Objectives}
+\lipsum[6]{}
+\section*{Mission Rewards}
+\lipsum[4]{}
+\SD
+\end{document}
