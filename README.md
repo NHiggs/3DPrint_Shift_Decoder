@@ -17,7 +17,7 @@ Also gets them to play together, outside, and sometimes the older one even helps
   * Decoder Assembly
   * Extra inner rings
 	  * Four extra inner rings with text in random order to simulate a salts 
-  * [Instructions](./docs/decoder.pdf)
+  * [Instructions](./docs/Instructions.pdf)
   * [Template](./docs/Mission_Template.tex)
 
 ### Settings
