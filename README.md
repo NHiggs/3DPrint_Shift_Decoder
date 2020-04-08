@@ -18,7 +18,7 @@ Also gets them to play together, outside, and sometimes the older one even helps
   * Extra inner rings
 	  * Four extra inner rings with text in random order to simulate a salts 
   * [Instructions](./docs/Instructions.pdf)
-  * [Template](./docs/Mission_Template.tex)
+  * [Template](./docs/MissionTemplate.tex)
 
 ### Settings
 | Print Setting | Value |
